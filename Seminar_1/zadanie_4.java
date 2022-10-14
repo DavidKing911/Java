@@ -36,6 +36,7 @@ public class zadanie_4 {
         */
         String first_num_1 = "";
         String second_num_1 = "";
+        int count = 0;
         for (int i = 0; i < 10; i++) {
             if (ind_1 == 1) {
                 first_num_1 = Integer.toString(i) + first_num.charAt(ind_1);
@@ -55,7 +56,11 @@ public class zadanie_4 {
                     System.out.printf("%s + %s = %d", first_num_1, second_num_1, res_1);
                     System.out.println();
                 }
+                if (res_1 != res) {
+                    count ++;
+                }
             }
         }
+        if (count == 100) System.out.print("Решений нет");
     }
 }
