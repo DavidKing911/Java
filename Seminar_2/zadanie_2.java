@@ -15,7 +15,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class zadanie_2 {
-    
+
     static void write(String[] ar) {
         /*
          * Записывает в файл массив строк
@@ -68,11 +68,14 @@ public class zadanie_2 {
         write(array);
         array = read();
         for (int i = 0; i < array.length; i++) {
-            System.out.printf("Студент %s получил %s по предмету %s.", 
-            array[i].split(" ")[1].substring(0, array[i].split(" ")[1].lastIndexOf(',')),
-            array[i].split(" ")[3].charAt(0),
-            array[i].split(" ")[5]);
-            System.out.println();
+            StringBuilder sb = new StringBuilder();
+            sb.append("Студент ");
+            sb.append(array[i].split(" ")[1].substring(0, array[i].split(" ")[1].lastIndexOf(',')));
+            sb.append(" получил ");
+            sb.append(array[i].split(" ")[3].charAt(0));
+            sb.append(" по предмету ");
+            sb.append(array[i].split(" ")[5] + ".");
+            System.out.println(sb);
         }
     }
 }
