@@ -17,7 +17,7 @@ public class zadanie_3 {
     }
     public static boolean checkAbs(LinkedList<Integer> arr_1, LinkedList<Integer> arr_2, int num_1, int num_2) {
         for (int i = 0; i < arr_1.size(); i++) {
-            if (Math.abs(arr_1.get(i)) - num_1 == Math.abs(arr_2.get(i)) - num_2) {
+            if (Math.abs(arr_1.get(i) - num_1) == Math.abs(arr_2.get(i) - num_2)) {
                 return false;
             }
         }
@@ -26,7 +26,7 @@ public class zadanie_3 {
     public static void main(String[] args) {
         int[][] array = new int[8][8];
         int count = 0;
-        while (count != 7) {
+        while (count != 8) {
             LinkedList<Integer> ll_x = new LinkedList<Integer>();
             LinkedList<Integer> ll_y = new LinkedList<Integer>();
             for (int i = 0; i < array.length; i++) {
